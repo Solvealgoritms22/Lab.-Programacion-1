@@ -1,20 +1,17 @@
-
 /*
-
 TEMA: Encapsulamiento y Constructores
 NOMBRE: Darling Fajardo
 MATRICULA: 100451815
 UNIVERSIIDAD: UASD
 ASIGNATURA: Lab. Programacion 1
 SECCION: 18
-
 */
 using System;
 
 //Clase princpal
 class TUCAFE{
 
-      //Atributos de lac clase
+      //Atributos de la clase
       private double CafeRegular = 10.00;
       private double CafeExpreso = 15.00;
       private double Capuchino = 25.00;
@@ -60,30 +57,14 @@ class TUCAFE{
         Console.Write("\n\t> Seleccone la Bebida que desea comprar: ");
         int comprar = int.Parse(Console.ReadLine());
           switch(comprar){
-          case 1: 
-          if(Saldo >= 10){  
-          Saldo -= CafeRegular; Console.WriteLine(mensaje2); Console.ReadKey(); break;}
-          else{Console.WriteLine(mensaje);
-          Console.ReadKey();
-          break;}
-          case 2: 
-          if(Saldo >= 15){  
-          Saldo -= CafeExpreso; Console.WriteLine(mensaje2); Console.ReadKey(); break;}
-          else{Console.WriteLine(mensaje);
-          Console.ReadKey();
-          break;}
-          case 3: 
-          if(Saldo >= 25){  
-          Saldo -= Capuchino; Console.WriteLine(mensaje2); Console.ReadKey(); break;}
-          else{Console.WriteLine(mensaje);
-          Console.ReadKey();
-          break;}
-          case 4: 
-          if(Saldo >= 25){  
-          Saldo -= Mocaccino; Console.WriteLine(mensaje2); Console.ReadKey(); break;}
-          else{Console.WriteLine(mensaje);
-          Console.ReadKey();
-          break;}
+          case 1: if(Saldo >= 10){Saldo -= CafeRegular; Console.WriteLine(mensaje2); Console.ReadKey(); break;} else{Console.WriteLine(mensaje);
+          Console.ReadKey();break;}
+          case 2: if(Saldo >= 15){Saldo -= CafeExpreso; Console.WriteLine(mensaje2); Console.ReadKey(); break;} else{Console.WriteLine(mensaje);
+          Console.ReadKey();break;}
+          case 3: if(Saldo >= 25){Saldo -= Capuchino; Console.WriteLine(mensaje2); Console.ReadKey(); break;} else{Console.WriteLine(mensaje);
+          Console.ReadKey();break;}
+          case 4: if(Saldo >= 25){Saldo -= Mocaccino; Console.WriteLine(mensaje2); Console.ReadKey(); break;} else{Console.WriteLine(mensaje);
+          Console.ReadKey();break;}
           default: Console.WriteLine("\n\tIntroduce la opcion correcta.");
           Console.ReadKey();
           Console.Clear();
@@ -102,7 +83,7 @@ class TUCAFE{
 
     }
      
-        //Metodo Destructor
+        //Metodo Destructor (Opcional ya que el propio sistema se encarga de destruir estos objetos basura)
         ~TUCAFE(){}
 
 }
@@ -134,7 +115,7 @@ class Program{
              goto Refrescar;
         }
 
-   }
+    }
 
 
 }
